@@ -32,7 +32,7 @@ ResultSet resultSet = null;
 try{ 
 connection = DriverManager.getConnection(connectionUrl, userId, password);
 statement=connection.createStatement();
-String sql ="SELECT location, total_cases FROM coviddata WHERE new_cases> 1000 GROUP BY location,total_cases,new_cases ORDER BY new_cases;";
+String sql ="SELECT location, total_cases FROM coviddata WHERE new_cases> 300 GROUP BY location,total_cases,new_cases ORDER BY new_cases;";
 
 resultSet = statement.executeQuery(sql);
 while(resultSet.next()){
